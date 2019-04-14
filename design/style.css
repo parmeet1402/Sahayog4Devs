@@ -1,0 +1,90 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --secondary-color: #55E6C1;
+}
+
+body {
+    color: var(--black);
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: "nav";
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Reusable components */
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--black);
+}
+
+/* Navbar */
+.Navbar {
+    background-color: var(--white);
+    display: flex;
+    padding: 16px;
+    color: var(--black);
+}
+
+.Navbar__Items {
+    display: flex;
+}
+
+.Navbar__Link {
+    padding-right: 8px;
+}
+
+.Navbar__Link-toggle {
+    display: none;
+}
+
+.Navbar__Items--right {
+    margin-left: auto;
+}
+
+.Navbar__heading {
+    font-size: 20px;
+}
+
+/* Navbar media queries */
+@media only screen and (max-width: 595px) {
+
+    .Navbar,
+    .Navbar__Items {
+        flex-direction: column;
+    }
+
+    .Navbar__Items {
+        display: none;
+    }
+
+    .Navbar__Items--right {
+        margin-left: 0;
+    }
+
+    .Navbar__Link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .Navbar__ToggleShow {
+        display: flex;
+    }
+}

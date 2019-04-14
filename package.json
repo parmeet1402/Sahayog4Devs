@@ -1,0 +1,35 @@
+{
+  "name": "pair-programming",
+  "version": "1.0.0",
+  "description": "pair-programming web app for codechef's hackathon",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "serve-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Parmeet Singh",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.13",
+    "node-uuid": "^1.4.8",
+    "nodemailer": "^4.6.8",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "request": "^2.88.0",
+    "sprintf-js": "^1.1.1",
+    "validator": "^10.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
